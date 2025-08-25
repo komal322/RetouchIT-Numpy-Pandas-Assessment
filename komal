@@ -1,0 +1,55 @@
+1:  (a)
+
+2:   (a) and (b) both can be done
+
+3:   import numpy as np
+      arr = np.array([-2, -1, 0, 1, 2])
+      arr[arr < 0] = 0
+      print(arr)
+
+4:   import numpy as np
+      matrix = np.array([[1, np.nan, 3], [4, 5, np.nan]])
+      a_means = np.nanmean(matrix, axis=1)
+       print(a_means)
+
+
+5:   (a)
+
+
+
+6:    import pandas as pd
+      data = {'Name': ['Alice', 'Bob', 'Charlie'], 'Age': [25, 30, 35]}
+      df = pd.DataFrame(data, index=[100, 101, 102])
+      print(df)
+
+
+7:    import pandas as pd
+      import numpy as np
+      df = pd.DataFrame({'A': [1, 2, np.nan], 'B': [np.nan, 5, 6]})
+      mean_B = df['B'].mean(skipna=True)
+      print(df)
+
+
+8:    import pandas as pd
+      df = pd.DataFrame({
+    'Region': ['North', 'South', 'North', 'South'],
+    'Sales': [100, 200, 150, 250],
+    'Profit': [20, 30, 25, 40]
+  })
+    result = df.groupby('Region').agg({'Sales': 'sum', 'Profit': 'mean'}).reset_index()
+    print(result)
+
+
+
+9:import pandas as pd
+
+  orders = pd.DataFrame({'order_id': [1, 2], 'cust_id': [101, 102]})
+  customers = pd.DataFrame({'cust_id': [101, 103], 'name': ['Alice', 'Bob']})
+  merged = pd.merge(orders, customers, on='cust_id', how='left')
+  print(merged)
+
+
+
+
+
+10:  
